@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE resources [
+  <!ELEMENT resources ANY>
+  <!ELEMENT string ANY>
+  <!ATTLIST string name ID #REQUIRED>
+]>
+<!-- GameAnarchy Default Locale Template -->
+<resources>
+  <!-- Tab Strips -->
+  <string name="MilestonesOptionTab">Milestones Option</string>
+  <string name="GameAnarchyTab">Game Anarchy</string>
+  <string name="KeyboardShortcutTab">Key Binding</string>
+  <string name="KeyBindDescription">The shortcut key responds only after the corresponding function is enabled.</string>
+  <!-- Milestones Options -->
+	<string name="Important">The following options require a reload of the game.</string>
+  <string name="EnabledUnlockDeluxeLandmarks">Unlock Deluxe Landmarks</string>
+  <string name="EnabledUnlockUniqueBuildings">Unlock Unique Buildings</string>
+  <string name="EnabledUnlockWonders">Unlock Wonders</string>
+  <string name="EnabledUnlockEuropeanLandmarks">Unlock European Landmarks</string>
+  <string name="EnabledUnlockAfterDarkLandmarks">Unlock After Dark Landmarks</string>
+  <string name="EnabledUnlockSnaowfallLandmarks">Unlock Snaowfall Landmarks</string>
+  <string name="EnabledUnlockNaturalDisastersLandmarks">Unlock Natural Disasters Landmarks</string>
+  <string name="EnabledUnlockMassTransitLandmarks">Unlock Mass Transit Landmarks</string>
+  <string name="EnabledUnlockGreenCitiesLandmarks">Unlock Green Cities Landmarks</string>
+  <string name="EnabledUnlockConcertsLandmarks">Unlock Unlock Concerts Landmarks</string>
+  <string name="EnabledUnlockParklifeLandmarks">Unlock Parklife Landmarks</string>
+  <string name="EnabledUnlockIndustriesLandmarks">Unlock Industries Landmarks</string>
+  <string name="EnabledUnlockCampusLandmarks">Unlock Campus Landmarks</string>
+  <string name="EnabledUnlockSunsetHarborLandmarks">Unlock Sunset Harbor Landmarks</string>
+  <string name="EnabledUnlockAirportsLandmarks">Unlock Airports Landmarks</string>
+	<!-- Game Anarchy Options -->
+	<string name="EnableAchievements">Enable Achievements</string>
+	<string name="EnabledAutoMoney">Enable Auto Money</string>
+	<string name="RemoveNoisePollution">Remove Noise Pollution</string>
+	<string name="RemoveGroundPollution">Remove Ground Pollution</string>
+	<string name="RemoveWaterPollution">Remove Water Pollution</string>
+	<string name="OilAndOreCapacity">Oil And Ore Capacity Options</string>
+	<string name="OilCapacity">Oil Capacity</string>
+    <string name="OreCapacity">Ore Capacity</string>
+
+	<string name="EnabledSkipIntro">Enable Skip Intro</string>
+	<string name="FastReturn">Fast Return</string>
+	<string name="SortSettings">Sort Settings</string>
+	<string name="UnlimitedUniqueBuildings">Unlimited Unique Buildings</string>
+
+	<string name="PressAnyKey">Press Any Key</string>
+	<string name="AddCash">Add Cash</string>
+	<!-- Misc. -->
+  <string name="builtinFunction">Builtin function:</string>
+  <string name="isEnabled">is enabled</string>
+  <string name="isDisabled">is disabled</string>
+</resources>

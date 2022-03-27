@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE resources [
+  <!ELEMENT resources ANY>
+  <!ELEMENT string ANY>
+  <!ATTLIST string name ID #REQUIRED>
+]>
+<!-- GameAnarchy Default Locale Template -->
+<resources>
+  <!-- Tab Strips -->
+  <string name="MilestonesOptionTab">里程碑选项</string>
+  <string name="GameAnarchyTab">游戏无碰撞</string>
+  <string name="KeyboardShortcutTab">快捷键</string>
+  <string name="KeyBindDescription">快捷键响应的前提是已启用对应功能。</string>
+  <!-- Milestones Options -->
+	<string name="Important">以下选项要求重新载入游戏。</string>
+	<string name="EnabledUnlockDeluxeLandmarks">解锁游戏豪华版本专属地标</string>
+	<string name="EnabledUnlockUniqueBuildings">解锁独特建筑</string>
+	<string name="EnabledUnlockWonders">解锁奇观</string>
+	<string name="EnabledUnlockEuropeanLandmarks">解锁内容创建者包: 欧洲郊区DLC地标</string>
+	<string name="EnabledUnlockAfterDarkLandmarks">解锁夜生活DLC地标</string>
+	<string name="EnabledUnlockSnaowfallLandmarks">解锁冰天雪地DLC地标</string>
+	<string name="EnabledUnlockNaturalDisastersLandmarks">解锁自然灾难DLC地标</string>
+	<string name="EnabledUnlockMassTransitLandmarks">解锁大众运输DLC地标</string>
+	<string name="EnabledUnlockGreenCitiesLandmarks">解锁绿色城市DLC地标</string>
+	<string name="EnabledUnlockConcertsLandmarks">解锁音乐会DLC地标</string>
+	<string name="EnabledUnlockParklifeLandmarks">解锁乐园生活DLC地标</string>
+	<string name="EnabledUnlockIndustriesLandmarks">解锁工业DLC地标</string>
+	<string name="EnabledUnlockCampusLandmarks">解锁校园DLC地标</string>
+	<string name="EnabledUnlockSunsetHarborLandmarks">解锁日落港口DLC地标</string>
+	<string name="EnabledUnlockAirportsLandmarks">解锁机场DLC地标</string>
+  <!-- Game Anarchy Options -->
+    <string name="EnableAchievements">成就系统</string>
+    <string name="EnabledAutoMoney">自动资金</string>
+    <string name="RemoveNoisePollution">移除噪声污染</string>
+    <string name="RemoveGroundPollution">移除地面污染</string>
+    <string name="RemoveWaterPollution">移除水污染</string>
+	<string name="OilAndOreCapacity">石油和矿业容量选项</string>
+	<string name="OilCapacity">石油容量</string>
+	<string name="OreCapacity">矿业容量</string>
+
+	<string name="EnabledSkipIntro">跳过游戏启动时logo显示</string>
+	<string name="FastReturn">快速退出游戏</string>
+	<string name="SortSettings">选项菜单按名称对齐</string>
+	<string name="UnlimitedUniqueBuildings">无限制摆放独特建筑</string>
+
+
+	<string name="PressAnyKey">请按任意键</string>
+	<string name="AddCash">增加现金</string>
+	
+	<!-- Misc. -->
+  <string name="builtinFunction">内部功能:</string>
+  <string name="isEnabled">已启用</string>
+  <string name="isDisabled">已禁用</string>
+</resources>
