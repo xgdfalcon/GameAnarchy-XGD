@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE resources [
+<!ELEMENT resources ANY>
+<!ELEMENT string ANY>
+<!ATTLIST string name ID #REQUIRED>
+]>
+<!-- Game Anarchy Default Locale Template -->
+<resources>
+	<!-- Tab Strips -->
+	<string name="GeneralOptionsTab">全般設定</string>
+	<string name="ResourceOptionsTab">資源の設定</string>
+	<string name="KeyboardShortcutTab">キーバインド</string>
+	<string name="KeyBindDescription">ショートカットキーは、対応機能が有効化されてから動作可能です</string>
+	<string name="SupportOptionTab">サポート</string>
+	<!-- General Options -->
+	<string name="EnableAchievements">Enabled achievements</string>
+	<string name="EnabledUnlimitedUniqueBuildings">Enabled unlimited unique buildings</string>
+	<string name="UnlockAll">Unlock all (Requires game reload)</string>
+	<string name="EnabledSkipIntro">Enabled skip intro</string>
+	<string name="RemoveNoisePollution">騒音公害を除去</string>
+	<string name="RemoveNoisePollutionTip">Remove noise pollution sources, different from Hide It! effect.</string>
+	<string name="RemoveGroundPollution">土壌汚染を除去</string>
+	<string name="RemoveGroundPollutionTip">Remove ground pollution sources, different from Hide It! effect.</string>
+	<string name="RemoveWaterPollution">水質汚染を除去</string>
+	<string name="RemoveWaterPollutionTip">Remove water pollution sources, different from Hide It! effect.</string>
+	<string name="RemoveDeath">死亡者を除去</string>
+	<string name="RemoveDeathTip">死亡者を新たな子供たちに置き換えて、デスケアの有効範囲を最大化します</string>
+	<string name="RemoveGarbage">ゴミを除去</string>
+	<string name="RemoveGarbageTip">全ての建物から、ゴミ発生を除去します</string>
+	<string name="RemoveCrime">犯罪者を除去</string>
+	<string name="RemoveCrimeTip">全ての建物から犯罪者を除去して、警察署の有効範囲を最大化します</string>
+	<string name="RemoveFire">火災を無効化</string>
+	<string name="RemoveFireTip">火災の危険を無くして、防火範囲を最大化します</string>
+	<string name="MaximizeAttractiveness">魅力度を最大化</string>
+	<string name="MaximizeAttractivenessTip">より多く観光客が訪問可能になります</string>
+	<string name="MaximizeEntertainment">娯楽度を最大化</string>
+	<string name="MaximizeEntertainmentTip">市民の幸福度を向上させます</string>
+	<string name="MaximizeLandValue">地価を最大化</string>
+	<string name="MaximizeLandValueTip">都市全体の地価を最大化します</string>
+	<string name="MaximizeEducationCoverage">教育範囲を最大化</string>
+	<string name="MaximizeEducationCoverageTip">教育済みの市民を得るために、教育施設がどうしても必要です</string>
+	<string name="FastReturn">Fast return</string>
+	<string name="SortSettings">Sort settings</string>
+	<!-- Resource OptionsTab -->
+	<string name="UnlimitedOil">Unlimited oil</string>
+	<string name="UnlimitedOre">Unlimited ore</string>
+	<string name="ConstructionRefund">建物撤去時に全額を返金</string>
+	<string name="EnabledAutoMoney">Enable auto cash</string>
+	<string name="AddCashThreshold">Add cash threshold</string>
+	<string name="AddCashAmount">Add cash amount</string>
+	<string name="Reset">Reset defaults</string>
+	<string name="EconomicIncome">Economic income options</string>
+	<string name="ResidentialMultiplierFactor">Residential multiplier factor</string>
+	<string name="IndustrialMultiplierFactor">Industrial multiplier factor</string>
+	<string name="CommercialMultiplierFactor">Commercial multiplier factor</string>
+	<string name="OfficeMultiplierFactor">Office multiplier factor</string>
+	<!-- KeyBinding -->
+	<string name="PressAnyKey">何かキーを押してください</string>
+	<string name="AddCash">Add cash</string>
+	<!-- Support -->
+	<string name="ChangeLog">Change log</string>
+	<string name="CompatibilityCheck">互換性の確認</string>
+	<string name="NORMAL">NORMAL</string>
+	<string name="WARNING">WARNING</string>
+	<string name="WarningPrompt">Game Anarchy detected incompatible mods, please unsubscribe from the following incompatible mods.</string>
+	<string name="NormalPrompt">Game Anarchy did not detect any incompatible mods.</string>
+	<string name="OK">OK</string>
+	<string name="DontShowAgain">Don\'t show again</string>
+	<!-- Misc. -->
+	<string name="builtinFunction">内蔵機能:</string>
+	<string name="isEnabled">= 有効化</string>
+	<string name="isDisabled">= 無効化</string>
+	<string name="DetectedMods">Game Anarchyと互換性の無いMODを検出しました！</string>
+	<string name="Close">閉じる</string>
+	<string name="SameFunctionality">Game Anarchyには、同じ機能が実装されています</string>
+	<string name="Incompatible">このMODは、Game Anarchyと互換性がありません</string>
+</resources>

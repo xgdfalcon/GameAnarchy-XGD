@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE resources [
-	<!ELEMENT resources ANY>
-	<!ELEMENT string ANY>
-	<!ATTLIST string name ID #REQUIRED>
+<!ELEMENT resources ANY>
+<!ELEMENT string ANY>
+<!ATTLIST string name ID #REQUIRED>
 ]>
 <!-- Game Anarchy Default Locale Template -->
 <resources>
 	<!-- Tab Strips -->
 	<string name="GeneralOptionsTab">General Options</string>
 	<string name="ResourceOptionsTab">Resource Options</string>
-	<string name="KeyboardShortcutTab">Key Binding</string>
-	<string name="KeyBindDescription">The shortcut key responds only after the corresponding function is enabled.</string>
+	<string name="KeyboardShortcutTab">단축키 설정</string>
+	<string name="KeyBindDescription">해당 단축키는 해당 기능이 활성화되면 작동합니다.</string>
 	<string name="SupportOptionTab">Support</string>
 	<!-- General Options -->
 	<string name="EnableAchievements">Enabled achievements</string>
@@ -34,7 +34,7 @@
 	<string name="MaximizeAttractiveness">Maximize attractiveness</string>
 	<string name="MaximizeAttractivenessTip">Should atract more tourists.</string>
 	<string name="MaximizeEntertainment">Maximize entertainment</string>
-	<string name="MaximizeEntertainmentTip">Should improve citizens' happiness.</string>
+	<string name="MaximizeEntertainmentTip">Should improve citizens\' happiness.</string>
 	<string name="MaximizeLandValue">Maximize land value</string>
 	<string name="MaximizeLandValueTip">Maximize land value across your city.</string>
 	<string name="MaximizeEducationCoverage">Maximize education coverage</string>
@@ -55,7 +55,7 @@
 	<string name="CommercialMultiplierFactor">Commercial multiplier factor</string>
 	<string name="OfficeMultiplierFactor">Office multiplier factor</string>
 	<!-- KeyBinding -->
-	<string name="PressAnyKey">Press Any Key</string>
+	<string name="PressAnyKey">설정할 키 입력</string>
 	<string name="AddCash">Add cash</string>
 	<!-- Support -->
 	<string name="ChangeLog">Change log</string>
@@ -65,11 +65,11 @@
 	<string name="WarningPrompt">Game Anarchy detected incompatible mods, please unsubscribe from the following incompatible mods.</string>
 	<string name="NormalPrompt">Game Anarchy did not detect any incompatible mods.</string>
 	<string name="OK">OK</string>
-	<string name="DontShowAgain">Don't show again</string>
+	<string name="DontShowAgain">Don\'t show again</string>
 	<!-- Misc. -->
-	<string name="builtinFunction">Builtin function:</string>
-	<string name="isEnabled">is enabled</string>
-	<string name="isDisabled">is disabled</string>
+	<string name="builtinFunction">내장 기능 :</string>
+	<string name="isEnabled">활성화됨</string>
+	<string name="isDisabled">비활성화됨</string>
 	<string name="DetectedMods">Game Anarchy detected incompatible mods</string>
 	<string name="Close">Close</string>
 	<string name="SameFunctionality">Game Anarchy already includes the same functionality.</string>

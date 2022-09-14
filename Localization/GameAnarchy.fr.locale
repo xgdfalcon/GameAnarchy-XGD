@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE resources [
-	<!ELEMENT resources ANY>
-	<!ELEMENT string ANY>
-	<!ATTLIST string name ID #REQUIRED>
+<!ELEMENT resources ANY>
+<!ELEMENT string ANY>
+<!ATTLIST string name ID #REQUIRED>
 ]>
 <!-- Game Anarchy Default Locale Template -->
 <resources>
 	<!-- Tab Strips -->
 	<string name="GeneralOptionsTab">General Options</string>
 	<string name="ResourceOptionsTab">Resource Options</string>
-	<string name="KeyboardShortcutTab">Key Binding</string>
-	<string name="KeyBindDescription">The shortcut key responds only after the corresponding function is enabled.</string>
+	<string name="KeyboardShortcutTab">Raccourcis clavier</string>
+	<string name="KeyBindDescription">La raccourci clavier ne répond que lorsque la fonction correspondante est activée.</string>
 	<string name="SupportOptionTab">Support</string>
 	<!-- General Options -->
 	<string name="EnableAchievements">Enabled achievements</string>
@@ -34,7 +34,7 @@
 	<string name="MaximizeAttractiveness">Maximize attractiveness</string>
 	<string name="MaximizeAttractivenessTip">Should atract more tourists.</string>
 	<string name="MaximizeEntertainment">Maximize entertainment</string>
-	<string name="MaximizeEntertainmentTip">Should improve citizens' happiness.</string>
+	<string name="MaximizeEntertainmentTip">Should improve citizens\' happiness.</string>
 	<string name="MaximizeLandValue">Maximize land value</string>
 	<string name="MaximizeLandValueTip">Maximize land value across your city.</string>
 	<string name="MaximizeEducationCoverage">Maximize education coverage</string>
@@ -65,7 +65,7 @@
 	<string name="WarningPrompt">Game Anarchy detected incompatible mods, please unsubscribe from the following incompatible mods.</string>
 	<string name="NormalPrompt">Game Anarchy did not detect any incompatible mods.</string>
 	<string name="OK">OK</string>
-	<string name="DontShowAgain">Don't show again</string>
+	<string name="DontShowAgain">Don\'t show again</string>
 	<!-- Misc. -->
 	<string name="builtinFunction">Builtin function:</string>
 	<string name="isEnabled">is enabled</string>

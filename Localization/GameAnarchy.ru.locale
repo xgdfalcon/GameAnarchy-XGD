@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE resources [
+<!ELEMENT resources ANY>
+<!ELEMENT string ANY>
+<!ATTLIST string name ID #REQUIRED>
+]>
+<!-- Game Anarchy Default Locale Template -->
+<resources>
+	<!-- Tab Strips -->
+	<string name="GeneralOptionsTab">Общие настройки</string>
+	<string name="ResourceOptionsTab">Параметры ресурсов</string>
+	<string name="KeyboardShortcutTab">Привязка клавиш</string>
+	<string name="KeyBindDescription">Горячая клавиша отвечает только после активации соответствующей функции.</string>
+	<string name="SupportOptionTab">Поддержка</string>
+	<!-- General Options -->
+	<string name="EnableAchievements">Enabled achievements</string>
+	<string name="EnabledUnlimitedUniqueBuildings">Enabled unlimited unique buildings</string>
+	<string name="UnlockAll">Unlock all (Requires game reload)</string>
+	<string name="EnabledSkipIntro">Enabled skip intro</string>
+	<string name="RemoveNoisePollution">Удалить шумовое загрязнение</string>
+	<string name="RemoveNoisePollutionTip">Remove noise pollution sources, different from Hide It! effect.</string>
+	<string name="RemoveGroundPollution">Удалить загрязнение ландшафта</string>
+	<string name="RemoveGroundPollutionTip">Remove ground pollution sources, different from Hide It! effect.</string>
+	<string name="RemoveWaterPollution">Удалить загрязнение воды</string>
+	<string name="RemoveWaterPollutionTip">Remove water pollution sources, different from Hide It! effect.</string>
+	<string name="RemoveDeath">Удалить умерших людей</string>
+	<string name="RemoveDeathTip">Кроме того, они заменяют их новыми детьми и обеспечивают максимальный охват услугами по охране смертности.</string>
+	<string name="RemoveGarbage">Вывезти мусор</string>
+	<string name="RemoveGarbageTip">Вывести мусор из всех зданий.</string>
+	<string name="RemoveCrime">Арестовать преступников</string>
+	<string name="RemoveCrimeTip">Арестовать преступников из всех зданий и обеспечить их максимальный охват полицией.</string>
+	<string name="RemoveFire">Убрать огонь</string>
+	<string name="RemoveFireTip">Снимите опасность пожара и активизируйте пожарную защиту.</string>
+	<string name="MaximizeAttractiveness">Увеличить привлекательность</string>
+	<string name="MaximizeAttractivenessTip">При увеличении привлекательности туристов будет больше.</string>
+	<string name="MaximizeEntertainment">Увеличение развлечения</string>
+	<string name="MaximizeEntertainmentTip">Должно улучшить счастье граждан.</string>
+	<string name="MaximizeLandValue">Увеличить стоимость земли</string>
+	<string name="MaximizeLandValueTip">Увеличение земли по всему городу.</string>
+	<string name="MaximizeEducationCoverage">Максимальный охват образованием</string>
+	<string name="MaximizeEducationCoverageTip">Всё ещё необходимы школы для получения образованных граждан.</string>
+	<string name="FastReturn">Fast return</string>
+	<string name="SortSettings">Sort settings</string>
+	<!-- Resource OptionsTab -->
+	<string name="UnlimitedOil">Unlimited oil</string>
+	<string name="UnlimitedOre">Unlimited ore</string>
+	<string name="ConstructionRefund">Полный возврат средств на строительство</string>
+	<string name="EnabledAutoMoney">Enable auto cash</string>
+	<string name="AddCashThreshold">Add cash threshold</string>
+	<string name="AddCashAmount">Add cash amount</string>
+	<string name="Reset">Reset defaults</string>
+	<string name="EconomicIncome">Economic income options</string>
+	<string name="ResidentialMultiplierFactor">Residential multiplier factor</string>
+	<string name="IndustrialMultiplierFactor">Industrial multiplier factor</string>
+	<string name="CommercialMultiplierFactor">Commercial multiplier factor</string>
+	<string name="OfficeMultiplierFactor">Office multiplier factor</string>
+	<!-- KeyBinding -->
+	<string name="PressAnyKey">Нажмите любую клавишу</string>
+	<string name="AddCash">Add cash</string>
+	<!-- Support -->
+	<string name="ChangeLog">Change log</string>
+	<string name="CompatibilityCheck">Проверка совместимости</string>
+	<string name="NORMAL">NORMAL</string>
+	<string name="WARNING">WARNING</string>
+	<string name="WarningPrompt">Game Anarchy detected incompatible mods, please unsubscribe from the following incompatible mods.</string>
+	<string name="NormalPrompt">Game Anarchy did not detect any incompatible mods.</string>
+	<string name="OK">OK</string>
+	<string name="DontShowAgain">Don\'t show again</string>
+	<!-- Misc. -->
+	<string name="builtinFunction">Встроенная функция:</string>
+	<string name="isEnabled">включено</string>
+	<string name="isDisabled">отключено</string>
+	<string name="DetectedMods">Обнаружены несовместимые моды</string>
+	<string name="Close">Закрыть</string>
+	<string name="SameFunctionality">Game Anarchy уже включает в себя ту же функцию.</string>
+	<string name="Incompatible">Этот мод несовместим с Game Anarchy.</string>
+</resources>

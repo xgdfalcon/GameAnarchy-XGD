@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE resources [
-	<!ELEMENT resources ANY>
-	<!ELEMENT string ANY>
-	<!ATTLIST string name ID #REQUIRED>
+<!ELEMENT resources ANY>
+<!ELEMENT string ANY>
+<!ATTLIST string name ID #REQUIRED>
 ]>
 <!-- Game Anarchy Default Locale Template -->
 <resources>
 	<!-- Tab Strips -->
-	<string name="GeneralOptionsTab">General Options</string>
+	<string name="GeneralOptionsTab">Opzioni generali</string>
 	<string name="ResourceOptionsTab">Resource Options</string>
 	<string name="KeyboardShortcutTab">Key Binding</string>
 	<string name="KeyBindDescription">The shortcut key responds only after the corresponding function is enabled.</string>
-	<string name="SupportOptionTab">Support</string>
+	<string name="SupportOptionTab">Supporto</string>
 	<!-- General Options -->
 	<string name="EnableAchievements">Enabled achievements</string>
 	<string name="EnabledUnlimitedUniqueBuildings">Enabled unlimited unique buildings</string>
 	<string name="UnlockAll">Unlock all (Requires game reload)</string>
 	<string name="EnabledSkipIntro">Enabled skip intro</string>
-	<string name="RemoveNoisePollution">Remove noise pollution</string>
+	<string name="RemoveNoisePollution">Rimuovi inquinamento acustico</string>
 	<string name="RemoveNoisePollutionTip">Remove noise pollution sources, different from Hide It! effect.</string>
 	<string name="RemoveGroundPollution">Remove ground pollution</string>
 	<string name="RemoveGroundPollutionTip">Remove ground pollution sources, different from Hide It! effect.</string>
-	<string name="RemoveWaterPollution">Remove water pollution</string>
+	<string name="RemoveWaterPollution">Rimuovi inquinamento dell\'acqua</string>
 	<string name="RemoveWaterPollutionTip">Remove water pollution sources, different from Hide It! effect.</string>
 	<string name="RemoveDeath">Remove dead people</string>
 	<string name="RemoveDeathTip">Also replace them with new children and maximize death care coverage.</string>
 	<string name="RemoveGarbage">Remove garbage</string>
 	<string name="RemoveGarbageTip">Remove garbage from all buildings.</string>
-	<string name="RemoveCrime">Remove criminals</string>
-	<string name="RemoveCrimeTip">Remove criminals from all buildings and maximize police coverage.</string>
+	<string name="RemoveCrime">Rimuovi criminali</string>
+	<string name="RemoveCrimeTip">Rimuovi criminali da tutti gli edifici e massimizza la copertura della polizia.</string>
 	<string name="RemoveFire">Remove fire</string>
 	<string name="RemoveFireTip">Remove fire hazards and maximize fire protection coverage.</string>
 	<string name="MaximizeAttractiveness">Maximize attractiveness</string>
 	<string name="MaximizeAttractivenessTip">Should atract more tourists.</string>
 	<string name="MaximizeEntertainment">Maximize entertainment</string>
-	<string name="MaximizeEntertainmentTip">Should improve citizens' happiness.</string>
+	<string name="MaximizeEntertainmentTip">Should improve citizens\' happiness.</string>
 	<string name="MaximizeLandValue">Maximize land value</string>
 	<string name="MaximizeLandValueTip">Maximize land value across your city.</string>
 	<string name="MaximizeEducationCoverage">Maximize education coverage</string>
@@ -55,7 +55,7 @@
 	<string name="CommercialMultiplierFactor">Commercial multiplier factor</string>
 	<string name="OfficeMultiplierFactor">Office multiplier factor</string>
 	<!-- KeyBinding -->
-	<string name="PressAnyKey">Press Any Key</string>
+	<string name="PressAnyKey">Premi qualsiasi tasto</string>
 	<string name="AddCash">Add cash</string>
 	<!-- Support -->
 	<string name="ChangeLog">Change log</string>
@@ -65,13 +65,13 @@
 	<string name="WarningPrompt">Game Anarchy detected incompatible mods, please unsubscribe from the following incompatible mods.</string>
 	<string name="NormalPrompt">Game Anarchy did not detect any incompatible mods.</string>
 	<string name="OK">OK</string>
-	<string name="DontShowAgain">Don't show again</string>
+	<string name="DontShowAgain">Don\'t show again</string>
 	<!-- Misc. -->
 	<string name="builtinFunction">Builtin function:</string>
 	<string name="isEnabled">is enabled</string>
 	<string name="isDisabled">is disabled</string>
 	<string name="DetectedMods">Game Anarchy detected incompatible mods</string>
-	<string name="Close">Close</string>
-	<string name="SameFunctionality">Game Anarchy already includes the same functionality.</string>
-	<string name="Incompatible">This mod is incompatible with Game Anarchy.</string>
+	<string name="Close">Chiudi</string>
+	<string name="SameFunctionality">Game Anarchy include già la stessa funzionalità.</string>
+	<string name="Incompatible">Questa mod è incompatibile con Game Anarchy.</string>
 </resources>

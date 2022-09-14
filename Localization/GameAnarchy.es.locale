@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE resources [
+<!ELEMENT resources ANY>
+<!ELEMENT string ANY>
+<!ATTLIST string name ID #REQUIRED>
+]>
+<!-- Game Anarchy Default Locale Template -->
+<resources>
+	<!-- Tab Strips -->
+	<string name="GeneralOptionsTab">Opciones generales</string>
+	<string name="ResourceOptionsTab">Opciones de recursos</string>
+	<string name="KeyboardShortcutTab">Atajos de teclado</string>
+	<string name="KeyBindDescription">El atajo de teclado solo responde después de que la función correspondiente esté habilitada.</string>
+	<string name="SupportOptionTab">Soporte</string>
+	<!-- General Options -->
+	<string name="EnableAchievements">Enabled achievements</string>
+	<string name="EnabledUnlimitedUniqueBuildings">Enabled unlimited unique buildings</string>
+	<string name="UnlockAll">Unlock all (Requires game reload)</string>
+	<string name="EnabledSkipIntro">Enabled skip intro</string>
+	<string name="RemoveNoisePollution">Eliminar la contaminación acústica</string>
+	<string name="RemoveNoisePollutionTip">Remove noise pollution sources, different from Hide It! effect.</string>
+	<string name="RemoveGroundPollution">Eliminar la contaminación del suelo</string>
+	<string name="RemoveGroundPollutionTip">Remove ground pollution sources, different from Hide It! effect.</string>
+	<string name="RemoveWaterPollution">Eliminar la contaminación del agua</string>
+	<string name="RemoveWaterPollutionTip">Remove water pollution sources, different from Hide It! effect.</string>
+	<string name="RemoveDeath">Eliminar gente muerta</string>
+	<string name="RemoveDeathTip">También reemplazarlos con nuevos niños y maximizar la cobertura de la atención a la muerte.</string>
+	<string name="RemoveGarbage">Eliminar basura</string>
+	<string name="RemoveGarbageTip">Elimina la basura de todos los edificios.</string>
+	<string name="RemoveCrime">Eliminar criminales</string>
+	<string name="RemoveCrimeTip">Elimina criminales de todos los edificios y maximiza la cobertura policial.</string>
+	<string name="RemoveFire">Eliminar fuego</string>
+	<string name="RemoveFireTip">Eliminar los riesgos de incendio y maximizar la cobertura de protección contra incendios.</string>
+	<string name="MaximizeAttractiveness">Maximizar atractivo</string>
+	<string name="MaximizeAttractivenessTip">Debería atraer más turistas.</string>
+	<string name="MaximizeEntertainment">Maximizar entretenimiento</string>
+	<string name="MaximizeEntertainmentTip">Debería aumentar la felicidad es de los ciudadanos.</string>
+	<string name="MaximizeLandValue">Maximizar valor de la tierra</string>
+	<string name="MaximizeLandValueTip">Maximizar valor de la tierra a lo largo de tu ciudad.</string>
+	<string name="MaximizeEducationCoverage">Maximizar la cobertura educativa</string>
+	<string name="MaximizeEducationCoverageTip">Aún son necesarias las escuelas para obtener ciudadanos educados.</string>
+	<string name="FastReturn">Fast return</string>
+	<string name="SortSettings">Sort settings</string>
+	<!-- Resource OptionsTab -->
+	<string name="UnlimitedOil">Unlimited oil</string>
+	<string name="UnlimitedOre">Unlimited ore</string>
+	<string name="ConstructionRefund">Demoler edificio con un reembolso completo</string>
+	<string name="EnabledAutoMoney">Enable auto cash</string>
+	<string name="AddCashThreshold">Add cash threshold</string>
+	<string name="AddCashAmount">Add cash amount</string>
+	<string name="Reset">Reset defaults</string>
+	<string name="EconomicIncome">Economic income options</string>
+	<string name="ResidentialMultiplierFactor">Residential multiplier factor</string>
+	<string name="IndustrialMultiplierFactor">Industrial multiplier factor</string>
+	<string name="CommercialMultiplierFactor">Commercial multiplier factor</string>
+	<string name="OfficeMultiplierFactor">Office multiplier factor</string>
+	<!-- KeyBinding -->
+	<string name="PressAnyKey">Presiona Cualquier Tecla</string>
+	<string name="AddCash">Add cash</string>
+	<!-- Support -->
+	<string name="ChangeLog">Change log</string>
+	<string name="CompatibilityCheck">Verificación de Compatibilidad</string>
+	<string name="NORMAL">NORMAL</string>
+	<string name="WARNING">WARNING</string>
+	<string name="WarningPrompt">Game Anarchy detected incompatible mods, please unsubscribe from the following incompatible mods.</string>
+	<string name="NormalPrompt">Game Anarchy did not detect any incompatible mods.</string>
+	<string name="OK">OK</string>
+	<string name="DontShowAgain">Don\'t show again</string>
+	<!-- Misc. -->
+	<string name="builtinFunction">Función integrada:</string>
+	<string name="isEnabled">activado</string>
+	<string name="isDisabled">desactivado</string>
+	<string name="DetectedMods">\"Game Anarchy\" detectó mods incompatibles</string>
+	<string name="Close">Cerrar</string>
+	<string name="SameFunctionality">\"Game Anarchy\" ya incluye la misma funcionalidad.</string>
+	<string name="Incompatible">Este mod es incompatible con \"Game Anarchy\".</string>
+</resources>

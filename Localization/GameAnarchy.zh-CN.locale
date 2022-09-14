@@ -1,54 +1,77 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE resources [
-  <!ELEMENT resources ANY>
-  <!ELEMENT string ANY>
-  <!ATTLIST string name ID #REQUIRED>
+<!ELEMENT resources ANY>
+<!ELEMENT string ANY>
+<!ATTLIST string name ID #REQUIRED>
 ]>
-<!-- GameAnarchy Default Locale Template -->
+<!-- Game Anarchy Default Locale Template -->
 <resources>
-  <!-- Tab Strips -->
-  <string name="MilestonesOptionTab">里程碑选项</string>
-  <string name="GameAnarchyTab">游戏无碰撞</string>
-  <string name="KeyboardShortcutTab">快捷键</string>
-  <string name="KeyBindDescription">快捷键响应的前提是已启用对应功能。</string>
-  <!-- Milestones Options -->
-	<string name="Important">以下选项要求重新载入游戏。</string>
-	<string name="EnabledUnlockDeluxeLandmarks">解锁游戏豪华版本专属地标</string>
-	<string name="EnabledUnlockUniqueBuildings">解锁独特建筑</string>
-	<string name="EnabledUnlockWonders">解锁奇观</string>
-	<string name="EnabledUnlockEuropeanLandmarks">解锁内容创建者包: 欧洲郊区DLC地标</string>
-	<string name="EnabledUnlockAfterDarkLandmarks">解锁夜生活DLC地标</string>
-	<string name="EnabledUnlockSnaowfallLandmarks">解锁冰天雪地DLC地标</string>
-	<string name="EnabledUnlockNaturalDisastersLandmarks">解锁自然灾难DLC地标</string>
-	<string name="EnabledUnlockMassTransitLandmarks">解锁大众运输DLC地标</string>
-	<string name="EnabledUnlockGreenCitiesLandmarks">解锁绿色城市DLC地标</string>
-	<string name="EnabledUnlockConcertsLandmarks">解锁音乐会DLC地标</string>
-	<string name="EnabledUnlockParklifeLandmarks">解锁乐园生活DLC地标</string>
-	<string name="EnabledUnlockIndustriesLandmarks">解锁工业DLC地标</string>
-	<string name="EnabledUnlockCampusLandmarks">解锁校园DLC地标</string>
-	<string name="EnabledUnlockSunsetHarborLandmarks">解锁日落港口DLC地标</string>
-	<string name="EnabledUnlockAirportsLandmarks">解锁机场DLC地标</string>
-  <!-- Game Anarchy Options -->
-    <string name="EnableAchievements">成就系统</string>
-    <string name="EnabledAutoMoney">自动资金</string>
-    <string name="RemoveNoisePollution">移除噪声污染</string>
-    <string name="RemoveGroundPollution">移除地面污染</string>
-    <string name="RemoveWaterPollution">移除水污染</string>
-	<string name="OilAndOreCapacity">石油和矿业容量选项</string>
-	<string name="OilCapacity">石油容量</string>
-	<string name="OreCapacity">矿业容量</string>
-
+	<!-- Tab Strips -->
+	<string name="GeneralOptionsTab">通用选项</string>
+	<string name="ResourceOptionsTab">资源选项</string>
+	<string name="KeyboardShortcutTab">快捷键</string>
+	<string name="KeyBindDescription">快捷键响应的前提是已启用对应功能。</string>
+	<string name="SupportOptionTab">支持</string>
+	<!-- General Options -->
+	<string name="EnableAchievements">启用成就系统</string>
+	<string name="EnabledUnlimitedUniqueBuildings">启用无限独特建筑</string>
+	<string name="UnlockAll">解锁所有 (需要重新加载游戏)</string>
 	<string name="EnabledSkipIntro">跳过游戏启动时logo显示</string>
+	<string name="RemoveNoisePollution">移除噪声污染</string>
+	<string name="RemoveNoisePollutionTip">移除噪声污染源头，与Hide It! 效果不一样。</string>
+	<string name="RemoveGroundPollution">移除地面污染</string>
+	<string name="RemoveGroundPollutionTip">移除地面污染源头，与Hide It! 效果不一样。</string>
+	<string name="RemoveWaterPollution">移除水污染</string>
+	<string name="RemoveWaterPollutionTip">移除水污染源头，与Hide It! 效果不一样。</string>
+	<string name="RemoveDeath">移除死亡市民</string>
+	<string name="RemoveDeathTip">同时用新的儿童替代，并最大化殉葬服务覆盖。</string>
+	<string name="RemoveGarbage">移除垃圾</string>
+	<string name="RemoveGarbageTip">将垃圾从所有建筑中清除。</string>
+	<string name="RemoveCrime">移除罪犯</string>
+	<string name="RemoveCrimeTip">移除所有建筑的罪犯并最大化警察服务的覆盖。</string>
+	<string name="RemoveFire">移除火灾</string>
+	<string name="RemoveFireTip">移除火灾隐患并最大化消防覆盖范围。</string>
+	<string name="MaximizeAttractiveness">最大化吸引力</string>
+	<string name="MaximizeAttractivenessTip">应该会吸引更多的游客。</string>
+	<string name="MaximizeEntertainment">最大化娱乐服务</string>
+	<string name="MaximizeEntertainmentTip">应该会提高市民的幸福度。</string>
+	<string name="MaximizeLandValue">最大化土地价值</string>
+	<string name="MaximizeLandValueTip">最大化城市的土地价值。</string>
+	<string name="MaximizeEducationCoverage">最大化教育服务覆盖范围</string>
+	<string name="MaximizeEducationCoverageTip">仍然需要学校获得受教育的市民。</string>
 	<string name="FastReturn">快速退出游戏</string>
 	<string name="SortSettings">选项菜单按名称对齐</string>
-	<string name="UnlimitedUniqueBuildings">无限制摆放独特建筑</string>
-
-
+	<!-- Resource OptionsTab -->
+	<string name="UnlimitedOil">无限原油（资源）</string>
+	<string name="UnlimitedOre">无限矿石（资源）</string>
+	<string name="ConstructionRefund">铲平建筑物全额退款</string>
+	<string name="EnabledAutoMoney">启用自动资金</string>
+	<string name="AddCashThreshold">自动加钱门槛</string>
+	<string name="AddCashAmount">加钱金额</string>
+	<string name="Reset">重置默认值</string>
+	<string name="EconomicIncome">经济收入选项</string>
+	<string name="ResidentialMultiplierFactor">住宅区倍乘因子</string>
+	<string name="IndustrialMultiplierFactor">工业区倍乘因子</string>
+	<string name="CommercialMultiplierFactor">商业区倍乘因子</string>
+	<string name="OfficeMultiplierFactor">办公区倍乘因子</string>
+	<!-- KeyBinding -->
 	<string name="PressAnyKey">请按任意键</string>
 	<string name="AddCash">增加现金</string>
-	
+	<!-- Support -->
+	<string name="ChangeLog">变更日志</string>
+	<string name="CompatibilityCheck">兼容性检测</string>
+	<string name="NORMAL">正常</string>
+	<string name="WARNING">警告</string>
+	<string name="WarningPrompt">Game Anarchy检测到不兼容模组，请取消订阅以下不兼容模组。</string>
+	<string name="NormalPrompt">Game Anarchy没有检测到不兼容模组。</string>
+	<string name="OK">确定</string>
+	<string name="DontShowAgain">不再显示</string>
 	<!-- Misc. -->
-  <string name="builtinFunction">内部功能:</string>
-  <string name="isEnabled">已启用</string>
-  <string name="isDisabled">已禁用</string>
+	<string name="builtinFunction">内部功能:</string>
+	<string name="isEnabled">已启用</string>
+	<string name="isDisabled">已禁用</string>
+	<string name="DetectedMods">Game Anarchy检测到不兼容模组</string>
+	<string name="Close">关闭</string>
+	<string name="SameFunctionality">Game Anarchy已具有相同功能</string>
+	<string name="Incompatible">该模组与Game Anarchy不兼容。</string>
 </resources>

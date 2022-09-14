@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE resources [
+<!ELEMENT resources ANY>
+<!ELEMENT string ANY>
+<!ATTLIST string name ID #REQUIRED>
+]>
+<!-- Game Anarchy Default Locale Template -->
+<resources>
+	<!-- Tab Strips -->
+	<string name="GeneralOptionsTab">Algemene instellingen</string>
+	<string name="ResourceOptionsTab">Grondstof instellingen</string>
+	<string name="KeyboardShortcutTab">Sneltoetsen</string>
+	<string name="KeyBindDescription">De sneltoets werkt alleen nadat de bijbehorende functie is geactiveerd.</string>
+	<string name="SupportOptionTab">Ondersteuning</string>
+	<!-- General Options -->
+	<string name="EnableAchievements">Enabled achievements</string>
+	<string name="EnabledUnlimitedUniqueBuildings">Enabled unlimited unique buildings</string>
+	<string name="UnlockAll">Unlock all (Requires game reload)</string>
+	<string name="EnabledSkipIntro">Enabled skip intro</string>
+	<string name="RemoveNoisePollution">Verwijder geluidsoverlast</string>
+	<string name="RemoveNoisePollutionTip">Remove noise pollution sources, different from Hide It! effect.</string>
+	<string name="RemoveGroundPollution">Verwijder bodemverontreiniging</string>
+	<string name="RemoveGroundPollutionTip">Remove ground pollution sources, different from Hide It! effect.</string>
+	<string name="RemoveWaterPollution">Verwijder watervervuiling</string>
+	<string name="RemoveWaterPollutionTip">Remove water pollution sources, different from Hide It! effect.</string>
+	<string name="RemoveDeath">Verwijder overleden burgers</string>
+	<string name="RemoveDeathTip">En verwissel ze ook met pasgeborenen en maximaliseer de dekking van de uitvaartdienst.</string>
+	<string name="RemoveGarbage">Verwijder afval</string>
+	<string name="RemoveGarbageTip">Verwijder het afval uit alle gebouwen.</string>
+	<string name="RemoveCrime">Verwijder criminelen</string>
+	<string name="RemoveCrimeTip">Verwijder criminelen uit alle gebouwen en maximaliseer de dekking van de politie.</string>
+	<string name="RemoveFire">Verwijder vuur</string>
+	<string name="RemoveFireTip">Verwijder brandgevaar en maximaliseer de brandveiligheidsdekking.</string>
+	<string name="MaximizeAttractiveness">Maximaliseer de aantrekkingskracht</string>
+	<string name="MaximizeAttractivenessTip">Zou meer toeristen moeten aantrekken.</string>
+	<string name="MaximizeEntertainment">Maximaliseer het entertainment</string>
+	<string name="MaximizeEntertainmentTip">Zou de tevredenheid van de burgers moeten verbeteren.</string>
+	<string name="MaximizeLandValue">Maximaliseer de grondwaarde</string>
+	<string name="MaximizeLandValueTip">Maximaliseer de grondwaarde over de hele stad.</string>
+	<string name="MaximizeEducationCoverage">Maximaliseer de dekking van het onderwijs</string>
+	<string name="MaximizeEducationCoverageTip">Scholen zijn nog steeds nodig om de burgers op te leiden.</string>
+	<string name="FastReturn">Fast return</string>
+	<string name="SortSettings">Sort settings</string>
+	<!-- Resource OptionsTab -->
+	<string name="UnlimitedOil">Unlimited oil</string>
+	<string name="UnlimitedOre">Unlimited ore</string>
+	<string name="ConstructionRefund">Volledige terugbetaling van sloopkosten</string>
+	<string name="EnabledAutoMoney">Enable auto cash</string>
+	<string name="AddCashThreshold">Add cash threshold</string>
+	<string name="AddCashAmount">Add cash amount</string>
+	<string name="Reset">Reset defaults</string>
+	<string name="EconomicIncome">Economic income options</string>
+	<string name="ResidentialMultiplierFactor">Residential multiplier factor</string>
+	<string name="IndustrialMultiplierFactor">Industrial multiplier factor</string>
+	<string name="CommercialMultiplierFactor">Commercial multiplier factor</string>
+	<string name="OfficeMultiplierFactor">Office multiplier factor</string>
+	<!-- KeyBinding -->
+	<string name="PressAnyKey">Druk op een toets</string>
+	<string name="AddCash">Add cash</string>
+	<!-- Support -->
+	<string name="ChangeLog">Change log</string>
+	<string name="CompatibilityCheck">Compatibiliteitscontrole</string>
+	<string name="NORMAL">NORMAL</string>
+	<string name="WARNING">WARNING</string>
+	<string name="WarningPrompt">Game Anarchy detected incompatible mods, please unsubscribe from the following incompatible mods.</string>
+	<string name="NormalPrompt">Game Anarchy did not detect any incompatible mods.</string>
+	<string name="OK">OK</string>
+	<string name="DontShowAgain">Don\'t show again</string>
+	<!-- Misc. -->
+	<string name="builtinFunction">Ingebouwde functie:</string>
+	<string name="isEnabled">is ingeschakeld</string>
+	<string name="isDisabled">is uitgeschakeld</string>
+	<string name="DetectedMods">Game Anarchy ontdekte incompatibele mods</string>
+	<string name="Close">Sluit</string>
+	<string name="SameFunctionality">Game Anarchy bevat reeds dezelfde functionaliteit.</string>
+	<string name="Incompatible">Deze mod is niet compatibel met Game Anarchy.</string>
+</resources>

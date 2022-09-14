@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE resources [
+<!ELEMENT resources ANY>
+<!ELEMENT string ANY>
+<!ATTLIST string name ID #REQUIRED>
+]>
+<!-- Game Anarchy Default Locale Template -->
+<resources>
+	<!-- Tab Strips -->
+	<string name="GeneralOptionsTab">通用選項</string>
+	<string name="ResourceOptionsTab">資源選擇</string>
+	<string name="KeyboardShortcutTab">鍵位綁定</string>
+	<string name="KeyBindDescription">只有開啓相應功能後，快捷鍵纔會響應。</string>
+	<string name="SupportOptionTab">支持</string>
+	<!-- General Options -->
+	<string name="EnableAchievements">Enabled achievements</string>
+	<string name="EnabledUnlimitedUniqueBuildings">Enabled unlimited unique buildings</string>
+	<string name="UnlockAll">Unlock all (Requires game reload)</string>
+	<string name="EnabledSkipIntro">Enabled skip intro</string>
+	<string name="RemoveNoisePollution">移除噪聲污染</string>
+	<string name="RemoveNoisePollutionTip">Remove noise pollution sources, different from Hide It! effect.</string>
+	<string name="RemoveGroundPollution">移除地面污染</string>
+	<string name="RemoveGroundPollutionTip">Remove ground pollution sources, different from Hide It! effect.</string>
+	<string name="RemoveWaterPollution">移除水污染</string>
+	<string name="RemoveWaterPollutionTip">Remove water pollution sources, different from Hide It! effect.</string>
+	<string name="RemoveDeath">移除死亡市民</string>
+	<string name="RemoveDeathTip">同時用新的兒童替代，並最大化殉葬服務覆蓋。</string>
+	<string name="RemoveGarbage">移除垃圾</string>
+	<string name="RemoveGarbageTip">將垃圾從所有建築中清除。</string>
+	<string name="RemoveCrime">移除罪犯</string>
+	<string name="RemoveCrimeTip">移除所有建築的罪犯並最大化警察服務的覆蓋。</string>
+	<string name="RemoveFire">移除火災</string>
+	<string name="RemoveFireTip">移除火災隱患並最大化消防覆蓋範圍。</string>
+	<string name="MaximizeAttractiveness">最大化吸引力</string>
+	<string name="MaximizeAttractivenessTip">應該會吸引更多的遊客。</string>
+	<string name="MaximizeEntertainment">最大化娛樂服務</string>
+	<string name="MaximizeEntertainmentTip">應該會提高市民的幸福度。</string>
+	<string name="MaximizeLandValue">最大化土地價值</string>
+	<string name="MaximizeLandValueTip">最大化城市的土地價值。</string>
+	<string name="MaximizeEducationCoverage">最大化教育服務覆蓋範圍</string>
+	<string name="MaximizeEducationCoverageTip">仍然需要學校獲得受教育的市民。</string>
+	<string name="FastReturn">Fast return</string>
+	<string name="SortSettings">Sort settings</string>
+	<!-- Resource OptionsTab -->
+	<string name="UnlimitedOil">Unlimited oil</string>
+	<string name="UnlimitedOre">Unlimited ore</string>
+	<string name="ConstructionRefund">剷平建築物全額退款</string>
+	<string name="EnabledAutoMoney">Enable auto cash</string>
+	<string name="AddCashThreshold">Add cash threshold</string>
+	<string name="AddCashAmount">Add cash amount</string>
+	<string name="Reset">Reset defaults</string>
+	<string name="EconomicIncome">Economic income options</string>
+	<string name="ResidentialMultiplierFactor">Residential multiplier factor</string>
+	<string name="IndustrialMultiplierFactor">Industrial multiplier factor</string>
+	<string name="CommercialMultiplierFactor">Commercial multiplier factor</string>
+	<string name="OfficeMultiplierFactor">Office multiplier factor</string>
+	<!-- KeyBinding -->
+	<string name="PressAnyKey">請按任意鍵</string>
+	<string name="AddCash">Add cash</string>
+	<!-- Support -->
+	<string name="ChangeLog">Change log</string>
+	<string name="CompatibilityCheck">兼容性檢測</string>
+	<string name="NORMAL">NORMAL</string>
+	<string name="WARNING">WARNING</string>
+	<string name="WarningPrompt">Game Anarchy detected incompatible mods, please unsubscribe from the following incompatible mods.</string>
+	<string name="NormalPrompt">Game Anarchy did not detect any incompatible mods.</string>
+	<string name="OK">OK</string>
+	<string name="DontShowAgain">Don\'t show again</string>
+	<!-- Misc. -->
+	<string name="builtinFunction">内部功能:</string>
+	<string name="isEnabled">已啟用</string>
+	<string name="isDisabled">已禁用</string>
+	<string name="DetectedMods">Game Anarchy檢測到不兼容模組</string>
+	<string name="Close">關閉</string>
+	<string name="SameFunctionality">Game Anarchy已具有相同功能</string>
+	<string name="Incompatible">該模組與Game Anarchy不兼容。</string>
+</resources>

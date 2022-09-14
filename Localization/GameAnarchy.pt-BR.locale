@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE resources [
+<!ELEMENT resources ANY>
+<!ELEMENT string ANY>
+<!ATTLIST string name ID #REQUIRED>
+]>
+<!-- Game Anarchy Default Locale Template -->
+<resources>
+	<!-- Tab Strips -->
+	<string name="GeneralOptionsTab">Opções gerais</string>
+	<string name="ResourceOptionsTab">Opções de Recursos</string>
+	<string name="KeyboardShortcutTab">Atalhos</string>
+	<string name="KeyBindDescription">A tecla de atalho responde apenas após a função correspondente estar ativa.</string>
+	<string name="SupportOptionTab">Suporte</string>
+	<!-- General Options -->
+	<string name="EnableAchievements">Enabled achievements</string>
+	<string name="EnabledUnlimitedUniqueBuildings">Enabled unlimited unique buildings</string>
+	<string name="UnlockAll">Unlock all (Requires game reload)</string>
+	<string name="EnabledSkipIntro">Enabled skip intro</string>
+	<string name="RemoveNoisePollution">Remover poluição sonora</string>
+	<string name="RemoveNoisePollutionTip">Remove noise pollution sources, different from Hide It! effect.</string>
+	<string name="RemoveGroundPollution">Remover poluição do solo</string>
+	<string name="RemoveGroundPollutionTip">Remove ground pollution sources, different from Hide It! effect.</string>
+	<string name="RemoveWaterPollution">Remover poluição da água</string>
+	<string name="RemoveWaterPollutionTip">Remove water pollution sources, different from Hide It! effect.</string>
+	<string name="RemoveDeath">Remover pessoas mortas</string>
+	<string name="RemoveDeathTip">Também substitui essas pessoas por novas crianças e amplia a área de cobertura dos necrotérios.</string>
+	<string name="RemoveGarbage">Remover lixo</string>
+	<string name="RemoveGarbageTip">Remove o lixo de todos os edifícios.</string>
+	<string name="RemoveCrime">Remover criminosos</string>
+	<string name="RemoveCrimeTip">Remove os criminosos de todos os edifícios e amplia a área de cobertura da polícia.</string>
+	<string name="RemoveFire">Remover incêndio</string>
+	<string name="RemoveFireTip">Remove os riscos de incêndio e amplia a área de cobertura de proteção contra incêndio.</string>
+	<string name="MaximizeAttractiveness">Maximizar a atratividade</string>
+	<string name="MaximizeAttractivenessTip">Deve atrair mais turistas.</string>
+	<string name="MaximizeEntertainment">Maximizar o entretenimento</string>
+	<string name="MaximizeEntertainmentTip">Deve melhorar a felicidade dos cidadãos.</string>
+	<string name="MaximizeLandValue">Maximizar o valor do terreno</string>
+	<string name="MaximizeLandValueTip">Aumenta o valor do terreno em toda sua cidade.</string>
+	<string name="MaximizeEducationCoverage">Maximizar a área cobertura da educação</string>
+	<string name="MaximizeEducationCoverageTip">Ainda será necessário escolas para educar os cidadãos.</string>
+	<string name="FastReturn">Fast return</string>
+	<string name="SortSettings">Sort settings</string>
+	<!-- Resource OptionsTab -->
+	<string name="UnlimitedOil">Unlimited oil</string>
+	<string name="UnlimitedOre">Unlimited ore</string>
+	<string name="ConstructionRefund">Reembolso de edifício demolidos</string>
+	<string name="EnabledAutoMoney">Enable auto cash</string>
+	<string name="AddCashThreshold">Add cash threshold</string>
+	<string name="AddCashAmount">Add cash amount</string>
+	<string name="Reset">Reset defaults</string>
+	<string name="EconomicIncome">Economic income options</string>
+	<string name="ResidentialMultiplierFactor">Residential multiplier factor</string>
+	<string name="IndustrialMultiplierFactor">Industrial multiplier factor</string>
+	<string name="CommercialMultiplierFactor">Commercial multiplier factor</string>
+	<string name="OfficeMultiplierFactor">Office multiplier factor</string>
+	<!-- KeyBinding -->
+	<string name="PressAnyKey">Aperte qualquer tecla</string>
+	<string name="AddCash">Add cash</string>
+	<!-- Support -->
+	<string name="ChangeLog">Change log</string>
+	<string name="CompatibilityCheck">Verificação de compatibilidade</string>
+	<string name="NORMAL">NORMAL</string>
+	<string name="WARNING">WARNING</string>
+	<string name="WarningPrompt">Game Anarchy detected incompatible mods, please unsubscribe from the following incompatible mods.</string>
+	<string name="NormalPrompt">Game Anarchy did not detect any incompatible mods.</string>
+	<string name="OK">OK</string>
+	<string name="DontShowAgain">Don\'t show again</string>
+	<!-- Misc. -->
+	<string name="builtinFunction">Função Integrada:</string>
+	<string name="isEnabled">está ativado</string>
+	<string name="isDisabled">está desativado</string>
+	<string name="DetectedMods">Game Anarchy detectou mods incompatíveis</string>
+	<string name="Close">Fechar</string>
+	<string name="SameFunctionality">Game Anarchy já inclui as mesmas funcionalidades.</string>
+	<string name="Incompatible">Este mod é incompatível com Game Anarchy.</string>
+</resources>
