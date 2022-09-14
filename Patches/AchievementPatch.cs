@@ -27,7 +27,7 @@ namespace GameAnarchy.Patches {
                 }
             }
             catch (Exception e) {
-                Debug.Log("[Achieve It!] ModManager:ToggleAchievements -> Exception: " + e.Message);
+                GAMod.GALog("ToggleAchievements -> Exception: " + e.Message);
             }
         }
 
@@ -55,7 +55,7 @@ namespace GameAnarchy.Patches {
                 }
             }
             catch (Exception e) {
-                Debug.Log("[Achieve It!] LoadPanelPatch:Postfix -> Exception: " + e.Message);
+                GAMod.GALog("ToggleAchievements -> Exception: " + e.Message);
             }
         }
     }

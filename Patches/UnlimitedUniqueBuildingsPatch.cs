@@ -2,55 +2,60 @@
 using System.Runtime.CompilerServices;
 
 namespace GameAnarchy.Patches {
-    [HarmonyPatch(typeof(MonumentAI))]
-    [HarmonyPatch(nameof(MonumentAI.CanBeBuiltOnlyOnce))]
+
+    [HarmonyPatch(typeof(MonumentAI), "CanBeBuiltOnlyOnce")]
     internal class MonumentAIPatch {
         [MethodImpl(MethodImplOptions.NoInlining)]
         public static bool Prefix(ref bool __result) {
-            __result = false;
-            return false;
+            if (GAMod.EnabledUnlimitedUniqueBuildings) {
+                __result = false;
+                return false;
+            } else return true;
         }
     }
 
-    [HarmonyPatch(typeof(PlayerBuildingAI))]
-    [HarmonyPatch(nameof(PlayerBuildingAI.CanBeBuiltOnlyOnce))]
+    [HarmonyPatch(typeof(PlayerBuildingAI), "CanBeBuiltOnlyOnce")]
     internal class PlayerBuildingAIPatch {
         [MethodImpl(MethodImplOptions.NoInlining)]
         public static bool Prefix(ref bool __result) {
-            __result = false;
-            return false;
+            if (GAMod.EnabledUnlimitedUniqueBuildings) {
+                __result = false;
+                return false;
+            } else return true;
         }
     }
 
-    [HarmonyPatch(typeof(SpaceRadarAI))]
-    [HarmonyPatch(nameof(SpaceRadarAI.CanBeBuiltOnlyOnce))]
+    [HarmonyPatch(typeof(SpaceRadarAI), "CanBeBuiltOnlyOnce")]
     internal class SpaceRadarAIPatch {
         [MethodImpl(MethodImplOptions.NoInlining)]
         public static bool Prefix(ref bool __result) {
-            __result = false;
-            return false;
+            if (GAMod.EnabledUnlimitedUniqueBuildings) {
+                __result = false;
+                return false;
+            } else return true;
         }
     }
 
-    [HarmonyPatch(typeof(UniqueFactoryAI))]
-    [HarmonyPatch(nameof(UniqueFactoryAI.CanBeBuiltOnlyOnce))]
+    [HarmonyPatch(typeof(UniqueFactoryAI), "CanBeBuiltOnlyOnce")]
     internal class UniqueFactoryAIPatch {
         [MethodImpl(MethodImplOptions.NoInlining)]
         public static bool Prefix(ref bool __result) {
-            __result = false;
-            return false;
+            if (GAMod.EnabledUnlimitedUniqueBuildings) {
+                __result = false;
+                return false;
+            } else return true;
         }
     }
 
-    [HarmonyPatch(typeof(WeatherRadarAI))]
-    [HarmonyPatch(nameof(WeatherRadarAI.CanBeBuiltOnlyOnce))]
+    [HarmonyPatch(typeof(WeatherRadarAI), "CanBeBuiltOnlyOnce")]
     internal class WeatherRadarAIPatch {
         [MethodImpl(MethodImplOptions.NoInlining)]
         public static bool Prefix(ref bool __result) {
-            __result = false;
-            return false;
+            if (GAMod.EnabledUnlimitedUniqueBuildings) {
+                __result = false;
+                return false;
+            } else return true;
         }
     }
-
 
 }

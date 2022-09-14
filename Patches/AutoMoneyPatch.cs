@@ -6,7 +6,7 @@ namespace GameAnarchy.Patches {
     public class AutoMoneyPatch : EconomyExtensionBase {
         public override long OnUpdateMoneyAmount(long internalMoneyAmount) {
             try {
-                if (GAMod.EnabledAutoMoney && internalMoneyAmount >= GAMod.DefaultMinAmount * 100) return internalMoneyAmount;
+                if (!GAMod.EnabledAutoMoney || internalMoneyAmount >= GAMod.DefaultMinAmount * 100) return internalMoneyAmount;
                 managers.threading.QueueMainThread(() => AddCash(true, GAMod.DefaultGetCash, () => managers.economy.internalMoneyAmount));
             } catch (Exception e) {
                 UnityEngine.Debug.LogException(e);
