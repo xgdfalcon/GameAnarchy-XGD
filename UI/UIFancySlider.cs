@@ -1,5 +1,4 @@
 ﻿using ColossalFramework.UI;
-using EManagersLib;
 using UnityEngine;
 
 namespace GameAnarchy.UI {
