@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>False</Deterministic>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,6 +31,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -44,9 +47,6 @@
     <Reference Include="ColossalManaged, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\PC\Desktop\Assembly\ColossalManaged.dll</HintPath>
-    </Reference>
-    <Reference Include="EManagersLib.API">
-      <HintPath>C:\Users\PC\Desktop\Assembly\EManagersLib.API.dll</HintPath>
     </Reference>
     <Reference Include="ICities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -64,8 +64,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extension\IndustrialResourcesExtension.cs" />
+    <Compile Include="MessageBox\BaseMessageBox.cs" />
+    <Compile Include="MessageBox\CompatibilityMessageBox.cs" />
+    <Compile Include="MessageBox\NewFunctionMessageBox.cs" />
+    <Compile Include="UI\AdvancedCustomUI.cs" />
+    <Compile Include="UI\CustomAtlas.cs" />
+    <Compile Include="EMath.cs" />
     <Compile Include="GACompatibilityCheck.cs" />
-    <Compile Include="GADialog.cs" />
     <Compile Include="GAKeyBinding.cs" />
     <Compile Include="GALocale.cs" />
     <Compile Include="GAMod.cs" />
@@ -75,12 +81,16 @@
     <Compile Include="GAPatcher.cs" />
     <Compile Include="Patches\AchievementPatch.cs" />
     <Compile Include="Patches\AutoMoneyPatch.cs" />
+    <Compile Include="Patches\CityServicesPatch.cs" />
+    <Compile Include="Patches\ConstructionRefund.cs" />
+    <Compile Include="Patches\EconomicIncomePatch.cs" />
     <Compile Include="Patches\InstantReturnToDesktopPatch.cs" />
     <Compile Include="Patches\MilestonesPatch.cs" />
-    <Compile Include="Patches\OilAndOreResourcePatch.cs" />
-    <Compile Include="Patches\PollutionSolutionPatch.cs" />
+    <Compile Include="Patches\RemoveFirePatch.cs" />
     <Compile Include="Patches\UnlimitedUniqueBuildingsPatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\UIColor.cs" />
+    <Compile Include="UI\UICustom.cs" />
     <Compile Include="UI\UIFancySlider.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -93,8 +103,40 @@
     <EmbeddedResource Include="Localization\DefaultLocale.resx" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Localization\GameAnarchy.de.locale" />
+    <None Include="Localization\GameAnarchy.es.locale" />
+    <None Include="Localization\GameAnarchy.fr.locale" />
+    <None Include="Localization\GameAnarchy.ja.locale" />
+    <None Include="Localization\GameAnarchy.ko.locale" />
+    <None Include="Localization\GameAnarchy.pt-BR.locale" />
+    <None Include="Localization\GameAnarchy.ru.locale" />
     <None Include="Localization\GameAnarchy.zh-CN.locale" />
     <None Include="Localization\GameAnarchy.en.locale" />
+    <None Include="Localization\GameAnarchy.zh-TW.locale" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\SettingToggleButtonEnabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\SettingToggleButtonDisabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\SettingButtonHovered.png" />
+    <EmbeddedResource Include="Resources\SettingButtonNormal.png" />
+    <EmbeddedResource Include="Resources\SettingButtonPressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\TabButtonHovered.png" />
+    <EmbeddedResource Include="Resources\TabButtonNormal.png" />
+    <EmbeddedResource Include="Resources\TabButtonPressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\NormalFlag.png" />
+    <EmbeddedResource Include="Resources\WarningFlag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\SettingCheckboxDisabled.png" />
+    <Content Include="Resources\SettingCheckboxEnabled.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

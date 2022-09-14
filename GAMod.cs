@@ -1,7 +1,6 @@
 ﻿using System;
 using ICities;
 using ColossalFramework;
-using HarmonyLib;
 using CitiesHarmony.API;
 using System.Threading;
 using System.Xml;
@@ -12,150 +11,107 @@ using ColossalFramework.UI;
 using System.Diagnostics;
 using ColossalFramework.Plugins;
 
+
 namespace GameAnarchy {
     public class GAMod : ILoadingExtension, IUserMod {
         private const string m_modName = @"Game Anarchy";
-        private const string m_modDesc = @"Unlock Game Limitation";
-        internal const string m_modVersion = @"0.0.1";
+        private const string m_modDesc = @"Extends game's functions";
+        internal const string m_modVersion = @"0.7.5";
         internal const string m_AssemblyVersion = m_modVersion + @".*";
         private const string m_debugLogFile = @"01GameAnarchyDebug.log";
         internal const string KeybindingConfigFile = @"GameAnarchyKeyBindSetting";
         internal static bool IsInGame = false;
-
-        private static bool enabledUnlockDeluxeLandmarks = false;
-        private static bool enabledUnlockUniqueBuildings = false;
-        private static bool enabledUnlockWonders = false;
-        private static bool enabledUnlockEuropeanLandmarks = false;
-        private static bool enabledUnlockAfterDarkLandmarks = false;
-        private static bool enabledUnlockSnaowfallLandmarks = false;
-        private static bool enabledUnlockNaturalDisastersLandmarks = false;
-        private static bool enabledUnlockMassTransitLandmarks = false;
-        private static bool enabledUnlockGreenCitiesLandmarks = false;
-        private static bool enabledUnlockConcertsLandmarks = false;
-        private static bool enabledUnlockParklifeLandmarks = false;
-        private static bool enabledUnlockIndustriesLandmarks = false;
-        private static bool enabledUnlockCampusLandmarks = false;
-        private static bool enabledUnlockSunsetHarborLandmarks = false;
-        private static bool enabledUnlockAirportsLandmarks = false;
+        public static string ModName => m_modName;
+        public static string ModVersion => m_modVersion;
 
         private static bool enabledAchievements = true;
-        private static bool enabledAutoMoney = true;
         private static bool enabledSkipIntro = false;
-        private static readonly int defaultMinAmount = 50000;
-        private static readonly int defaultGetCash = 10000000;
-        private static float oilCapacity = 100;
-        private static float oreCapacity = 100;
-
-        private static bool removeNoisePollution = false;
-        private static bool removeGroundPollution = false;
-        private static bool removeWaterPollution = false;
-
-        private static bool addCashManually = true;
-
-        public static bool AddCashManually {
-            get {
-                if(EnabledAutoMoney) return addCashManually;
-                return false;
-            }
-        }
-
-        public static bool EnabledUnlockDeluxeLandmarks {
-            get => enabledUnlockDeluxeLandmarks;
-            set => enabledUnlockDeluxeLandmarks = value;
-        }
-        public static bool EnabledUnlockUniqueBuildings { 
-            get => enabledUnlockUniqueBuildings;
-            set => enabledUnlockUniqueBuildings = value;
-        }
-        public static bool EnabledUnlockWonders {
-            get => enabledUnlockWonders;
-            set => enabledUnlockWonders = value;
-        }
-        public static bool EnabledUnlockEuropeanLandmarks {
-            get => enabledUnlockEuropeanLandmarks;
-            set => enabledUnlockEuropeanLandmarks = value;
-        }
-        public static bool EnabledUnlockAfterDarkLandmarks {
-            get => enabledUnlockAfterDarkLandmarks;
-            set => enabledUnlockAfterDarkLandmarks = value;
-        }
-        public static bool EnabledUnlockSnaowfallLandmarks {
-            get => enabledUnlockSnaowfallLandmarks;
-            set => enabledUnlockSnaowfallLandmarks = value;
-        }
-        public static bool EnabledUnlockNaturalDisastersLandmarks {
-            get => enabledUnlockNaturalDisastersLandmarks;
-            set => enabledUnlockNaturalDisastersLandmarks = value;
-        }
-        public static bool EnabledUnlockMassTransitLandmarks {
-            get => enabledUnlockMassTransitLandmarks;
-            set => enabledUnlockMassTransitLandmarks = value;
-        }
-        public static bool EnabledUnlockGreenCitiesLandmarks {
-            get => enabledUnlockGreenCitiesLandmarks;
-            set => enabledUnlockGreenCitiesLandmarks = value;
-        }
-        public static bool EnabledUnlockConcertsLandmarks {
-            get => enabledUnlockConcertsLandmarks;
-            set => enabledUnlockConcertsLandmarks = value;
-        }
-        public static bool EnabledUnlockParklifeLandmarks {
-            get => enabledUnlockParklifeLandmarks;
-            set => enabledUnlockParklifeLandmarks = value;
-        }
-        public static bool EnabledUnlockIndustriesLandmarks {
-            get => enabledUnlockIndustriesLandmarks;
-            set => enabledUnlockIndustriesLandmarks = value;
-        }
-        public static bool EnabledUnlockCampusLandmarks {
-            get => enabledUnlockCampusLandmarks;
-            set => enabledUnlockCampusLandmarks = value;
-        }
-        public static bool EnabledUnlockSunsetHarborLandmarks {
-            get => enabledUnlockSunsetHarborLandmarks;
-            set => enabledUnlockSunsetHarborLandmarks = value;
-        }
-        public static bool EnabledUnlockAirportsLandmarks {
-            get => enabledUnlockAirportsLandmarks;
-            set => enabledUnlockAirportsLandmarks = value;
-        }
-
-        
-
-
         public static bool EnabledAchievements {
             get => enabledAchievements;
             set => enabledAchievements = value;
-        }
-        public static bool EnabledAutoMoney {
-            get => enabledAutoMoney;
-            set => enabledAutoMoney = value;
         }
         public static bool EnabledSkipIntro {
             get => enabledSkipIntro;
             set => enabledSkipIntro = value;
         }
-
-        public static float OilCapacity {
-            get => oilCapacity;
-            set {
-                if (oilCapacity != value) {
-                    oilCapacity = value;
-                    ThreadPool.QueueUserWorkItem(SaveSettings);
-                }
-            }
+        private static bool enabledUnlimitedUniqueBuildings = true;
+        public static bool EnabledUnlimitedUniqueBuildings {
+            get => enabledUnlimitedUniqueBuildings;
+            set => enabledUnlimitedUniqueBuildings = value;
         }
 
-        public static float OreCapacity {
-            get => oreCapacity;
-            set {
-                if (oreCapacity != value) {
-                    oreCapacity = value;
-                    ThreadPool.QueueUserWorkItem(SaveSettings);
-                }
-            }
+        #region UnlockAll
+        private static bool isUnlockAll = true;
+        private static int unlockMilestonesLevels = 13;
+        public static bool IsUnlockAll {
+            get => isUnlockAll;
+            set => isUnlockAll = value;
+        }
+        public static int UnLockMilestonesLevels {
+            get => unlockMilestonesLevels;
+            set => unlockMilestonesLevels = value;
+        }
+        #endregion
+
+        #region Resource
+        private static bool enabledAutoMoney = true;
+        internal static int defaultMinAmount = 50000;
+        internal static int defaultGetCash = 5000000;
+
+
+        private static bool unlimitedOil = true;
+        private static bool unlimitedOre = true;
+
+        public static bool UnlimitedOil {
+            get => unlimitedOil;
+            set => unlimitedOil = value;
+        }
+        internal static bool UnlimitedOre {
+            get => unlimitedOre;
+            set => unlimitedOre = value;
         }
 
+
+
+        private static bool refund = false;
+        private static bool addCashManually = true;
+        public static bool EnabledAutoMoney {
+            get => enabledAutoMoney;
+            set => enabledAutoMoney = value;
+        }
+        public static bool AddCashManually {
+            get {
+                if (EnabledAutoMoney) return addCashManually;
+                return false;
+            }
+        }
+        public static int DefaultMinAmount {
+            get => defaultMinAmount;
+            set => defaultMinAmount = value;
+        }
+        public static int DefaultGetCash {
+            get => defaultGetCash;
+            set => defaultGetCash = value;
+        }
+        public static bool Refund {
+            get => refund;
+            set => refund = value;
+        }
+        
+        #endregion
+
+        #region CityService
+        private static bool removeNoisePollution = false;
+        private static bool removeGroundPollution = false;
+        private static bool removeWaterPollution = false;
+        private static bool removeDeath = false;
+        private static bool removeGarbage = false;
+        private static bool removeCrime = false;
+        private static bool removeFire = false;
+        private static bool maximizeAttractiveness = false;
+        private static bool maximizeEntertainment = false;
+        private static bool maximizeLandValue = false;
+        private static bool maximizeEducationCoverage = false;
         public static bool RemoveNoisePollution {
             get => removeNoisePollution;
             set => removeNoisePollution = value;
@@ -169,19 +125,78 @@ namespace GameAnarchy {
             set {
                 if (removeWaterPollution != value) {
                     removeWaterPollution = value;
-                    ThreadPool.QueueUserWorkItem(SaveSettings);
                 }
             }
         }
+        public static bool RemoveDeath {
+            get => removeDeath;
+            set => removeDeath = value;
+        }
+        public static bool RemoveGarbage {
+            get => removeGarbage;
+            set => removeGarbage = value;
+        }
+        public static bool RemoveCrime {
+            get => removeCrime;
+            set => removeCrime = value;
+        }
+        public static bool RemoveFire {
+            get => removeFire;
+            set => removeFire = value;
+        }
+        public static bool MaximizeAttractiveness {
+            get => maximizeAttractiveness;
+            set => maximizeAttractiveness = value;
+        }
+        public static bool MaximizeEntertainment {
+            get => maximizeEntertainment;
+            set => maximizeEntertainment = value;
+        }
+        public static bool MaximizeLandValue {
+            get => maximizeLandValue;
+            set => maximizeLandValue = value;
+        }
+        public static bool MaximizeEducationCoverage {
+            get => maximizeEducationCoverage;
+            set => maximizeEducationCoverage = value;
+        }
+        #endregion
 
-        public static int DefaultMinAmount => defaultMinAmount;
+        #region EconomicIncome
+        internal static int residentialMultiplierFactor = 1;
+        internal static int industrialMultiplierFactor = 1;
+        internal static int commercialMultiplierFactor = 1;
+        internal static int officeMultiplierFactor = 1;
 
-        public static int DefaultGetCash => defaultGetCash;
-            
-        public static Rect ButtonRect { get; set; } = new Rect(0, 0, 120, 30);
+        public static int ResidenticalMultiplierFactor {
+            get => residentialMultiplierFactor;
+            set => residentialMultiplierFactor = value;
+        }
+        public static int IndustrialMultiplierFactor {
+            get => industrialMultiplierFactor;
+            set => industrialMultiplierFactor = value;
+        }
+        public static int CommercialMultiplierFactor {
+            get => commercialMultiplierFactor;
+            set => commercialMultiplierFactor = value;
+        }
+        public static int OfficeMultiplierFactor {
+            get => officeMultiplierFactor;
+            set => officeMultiplierFactor = value;
+        }
+        #endregion
+
+        internal static void Reset() {
+            defaultMinAmount = 50000;
+            defaultGetCash = 5000000;
+            residentialMultiplierFactor = 1;
+            industrialMultiplierFactor = 1;
+            commercialMultiplierFactor = 1;
+            officeMultiplierFactor = 1;
+        }
 
         private GameObject achievementsObject;
-
+        public static bool IsConflict = false;
 
         #region UserMod
         public string Name => m_modName + ' ' + m_modVersion;
@@ -189,69 +204,91 @@ namespace GameAnarchy {
         public void OnEnabled() {
             try {
                 CreateDebugFile();
-            } catch (Exception e) {
+            }
+            catch (Exception e) {
                 UnityEngine.Debug.LogException(e);
             }
-            try {
-                if (GameSettings.FindSettingsFileByName(KeybindingConfigFile) is null) {
-                    GameSettings.AddSettingsFile(new SettingsFile[] {
-                        new SettingsFile() { fileName = KeybindingConfigFile }
-                    });
-                }
-            } catch (Exception e) {
-                UnityEngine.Debug.LogException(e);
-            }
+            
             GALocale.Init();
             for (int loadTries = 0; loadTries < 5; loadTries++) {
-                if (LoadSettings()) break; 
+                if (LoadSettings()) break;
             }
             HarmonyHelper.DoOnHarmonyReady(GAPatcher.EnablePatches);
             GameObject returnToDesktop = new GameObject("ReturnToDesktop");
             UnityEngine.Object.DontDestroyOnLoad(returnToDesktop);
-            CompatibilityCheck.CheckIncompatibleMods();
-
+            
+             
         }
         public void OnDisabled() {
             SaveSettings();
             if (HarmonyHelper.IsHarmonyInstalled) GAPatcher.DisablePatches();
         }
         public void OnSettingsUI(UIHelperBase helper) {
+            try {
+                if (GameSettings.FindSettingsFileByName(KeybindingConfigFile) is null) {
+                    GameSettings.AddSettingsFile(new SettingsFile[] { new SettingsFile() { fileName = KeybindingConfigFile }
+                    });
+                }
+            }
+            catch (Exception e) {
+                UnityEngine.Debug.LogException(e);
+            }
             GALocale.OnLocaleChanged();
             LocaleManager.eventLocaleChanged += GALocale.OnLocaleChanged;
             GAOptionPanel.SetupPanel((helper.AddGroup(m_modName + @" -- Version " + m_modVersion) as UIHelper).self as UIPanel);
+            if (GACompatibilityCheck.CheckIncompatibleMods()) {
+                IsConflict = true;
+            }
+            if (IsConflict) {
+                MessageBox.Show<CompatibilityMessageBox>();
+            }
         }
 
         #endregion
 
         #region LoadingExtension
+
+        //private GameObject clockObject;
         public void OnCreated(ILoading loading) {
             OutputPluginsList();
+
         }
 
-        public void OnReleased() { 
+        public void OnReleased() {
         }
         public void OnLevelLoaded(LoadMode mode) {
             #region Achievements
             try {
                 achievementsObject = new GameObject(@"AchievementManager");
                 achievementsObject.AddComponent<Patches.AchievementManager>();
-            } catch(Exception e) {
+            }
+            catch (Exception e) {
                 UnityEngine.Debug.LogException(e);
             }
+
             #endregion
+            //clockObject = new GameObject("GameInClock");
+            //clockObject.AddComponent<Patches.GameInClockPatch>().parent = this;
+
         }
 
-        public void OnLevelUnloading() { 
+        public void OnLevelUnloading() {
             #region Achievements
-            if (achievementsObject != null) { 
+            if (achievementsObject != null) {
                 try {
-                UnityEngine.Object.Destroy(achievementsObject);
-            } catch(Exception e) {
-                UnityEngine.Debug.LogException(e);
+                    UnityEngine.Object.Destroy(achievementsObject);
+                }
+                catch (Exception e) {
+                    UnityEngine.Debug.LogException(e);
                 }
             }
-            
+
             #endregion
+            //if (clockObject != null) { 
+            //    UnityEngine.Object.Destroy(clockObject);
+            //    clockObject = null;
+            //}
+
         }
         #endregion
 
@@ -266,30 +303,31 @@ namespace GameAnarchy {
                 };
                 xmlConfig.Load(SettingsFileName);
                 enabledAchievements = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"Achievement"));
-                enabledAutoMoney = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"AutoMoney"));
+                isUnlockAll = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"IsUnlockAll"));
+                enabledUnlimitedUniqueBuildings = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"EnabledUnlimitedUniqueBuildings"));
+                unlockMilestonesLevels = int.Parse(xmlConfig.DocumentElement.GetAttribute(@"UnlockMilestonesLevels"), System.Globalization.NumberStyles.Float);
                 enabledSkipIntro = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"SkipIntro"));
-
-                enabledUnlockDeluxeLandmarks = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"UnlockDeluxeLandmarks"));
-                enabledUnlockUniqueBuildings = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"UnlockUniqueBuildings"));
-                enabledUnlockWonders = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"UnlockWonders"));
-                enabledUnlockEuropeanLandmarks = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"UnlockEuropeanLandmarks"));
-                enabledUnlockAfterDarkLandmarks = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"UnlockAfterDarkLandmarks"));
-                enabledUnlockSnaowfallLandmarks = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"UnlockSnaowfallLandmarks"));
-                enabledUnlockNaturalDisastersLandmarks = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"UnlockNaturalDisastersLandmarks"));
-                enabledUnlockMassTransitLandmarks = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"UnlockMassTransitLandmarks"));
-                enabledUnlockGreenCitiesLandmarks = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"UnlockGreenCitiesLandmarks"));
-                enabledUnlockConcertsLandmarks = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"UnlockConcertsLandmarks"));
-                enabledUnlockParklifeLandmarks = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"UnlockParklifeLandmarks"));
-                enabledUnlockIndustriesLandmarks = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"UnlockIndustriesLandmarks"));
-                enabledUnlockCampusLandmarks = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"UnlockCampusLandmarks"));
-                enabledUnlockSunsetHarborLandmarks = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"UnlockSunsetHarborLandmarks"));
-                enabledUnlockAirportsLandmarks = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"UnlockAirportsLandmarks"));
-
                 removeNoisePollution = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"RemoveNoisePollution"));
                 removeGroundPollution = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"RemoveGroundPollution"));
                 removeWaterPollution = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"RemoveWaterPollution"));
-                oilCapacity = float.Parse(xmlConfig.DocumentElement.GetAttribute(@"OilCapacity"), System.Globalization.NumberStyles.Float);
-                oreCapacity = float.Parse(xmlConfig.DocumentElement.GetAttribute(@"OreCapacity"), System.Globalization.NumberStyles.Float);
+                removeDeath = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"RemoveDeath"));
+                removeCrime = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"RemoveCrime"));
+                removeGarbage = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"RemoveGarbage"));
+                removeFire = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"RemoveFire"));
+                maximizeAttractiveness = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"MaximizeAttractiveness"));
+                maximizeEntertainment = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"MaximizeEntertainment"));
+                maximizeLandValue = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"MaximizeLandValue"));
+                maximizeEducationCoverage = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"MaximizeEducationCoverage"));
+                unlimitedOil = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"UnlimitedOil"));
+                unlimitedOre = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"UnlimitedOre"));
+                enabledAutoMoney = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"AutoMoney"));
+                refund = bool.Parse(xmlConfig.DocumentElement.GetAttribute(@"Refund"));
+                defaultMinAmount = int.Parse(xmlConfig.DocumentElement.GetAttribute(@"DefaultMinAmount"), System.Globalization.NumberStyles.Float);
+                defaultGetCash = int.Parse(xmlConfig.DocumentElement.GetAttribute(@"DefaultGetCash"), System.Globalization.NumberStyles.Float);
+                residentialMultiplierFactor = int.Parse(xmlConfig.DocumentElement.GetAttribute(@"ResidentialMultiplierFactor"), System.Globalization.NumberStyles.Float);
+                industrialMultiplierFactor = int.Parse(xmlConfig.DocumentElement.GetAttribute(@"IndustrialMultiplierFactor"), System.Globalization.NumberStyles.Float);
+                commercialMultiplierFactor = int.Parse(xmlConfig.DocumentElement.GetAttribute(@"CommercialMultiplierFactor"), System.Globalization.NumberStyles.Float);
+                officeMultiplierFactor = int.Parse(xmlConfig.DocumentElement.GetAttribute(@"OfficeMultiplierFactor"), System.Globalization.NumberStyles.Float);
 
             }
             catch (Exception e) {
@@ -309,36 +347,35 @@ namespace GameAnarchy {
                 };
                 XmlElement root = xmlConfig.CreateElement(@"GameAnarchyConfig");
                 root.Attributes.Append(AddElement(xmlConfig, @"Achievement", enabledAchievements));
-                root.Attributes.Append(AddElement(xmlConfig, @"AutoMoney", enabledAutoMoney));
+                root.Attributes.Append(AddElement(xmlConfig, @"IsUnlockAll", isUnlockAll));
+                root.Attributes.Append(AddElement(xmlConfig, @"EnabledUnlimitedUniqueBuildings", enabledUnlimitedUniqueBuildings));
+                root.Attributes.Append(AddElement(xmlConfig, @"UnlockMilestonesLevels", unlockMilestonesLevels));
                 root.Attributes.Append(AddElement(xmlConfig, @"SkipIntro", enabledSkipIntro));
-
-                root.Attributes.Append(AddElement(xmlConfig, @"UnlockDeluxeLandmarks", enabledUnlockDeluxeLandmarks));
-                root.Attributes.Append(AddElement(xmlConfig, @"UnlockUniqueBuildings", enabledUnlockUniqueBuildings));
-                root.Attributes.Append(AddElement(xmlConfig, @"UnlockWonders", enabledUnlockWonders));
-                root.Attributes.Append(AddElement(xmlConfig, @"UnlockEuropeanLandmarks", enabledUnlockEuropeanLandmarks));
-                root.Attributes.Append(AddElement(xmlConfig, @"UnlockAfterDarkLandmarks", enabledUnlockAfterDarkLandmarks));
-                root.Attributes.Append(AddElement(xmlConfig, @"UnlockSnaowfallLandmarks", enabledUnlockSnaowfallLandmarks));
-                root.Attributes.Append(AddElement(xmlConfig, @"UnlockNaturalDisastersLandmarks", enabledUnlockNaturalDisastersLandmarks));
-                root.Attributes.Append(AddElement(xmlConfig, @"UnlockMassTransitLandmarks", enabledUnlockMassTransitLandmarks));
-                root.Attributes.Append(AddElement(xmlConfig, @"UnlockGreenCitiesLandmarks", enabledUnlockGreenCitiesLandmarks));
-                root.Attributes.Append(AddElement(xmlConfig, @"UnlockConcertsLandmarks", enabledUnlockConcertsLandmarks));
-                root.Attributes.Append(AddElement(xmlConfig, @"UnlockParklifeLandmarks", enabledUnlockParklifeLandmarks));
-                root.Attributes.Append(AddElement(xmlConfig, @"UnlockIndustriesLandmarks", enabledUnlockIndustriesLandmarks)); 
-                root.Attributes.Append(AddElement(xmlConfig, @"UnlockCampusLandmarks", enabledUnlockCampusLandmarks));
-                root.Attributes.Append(AddElement(xmlConfig, @"UnlockSunsetHarborLandmarks", enabledUnlockSunsetHarborLandmarks));
-                root.Attributes.Append(AddElement(xmlConfig, @"UnlockAirportsLandmarks", enabledUnlockAirportsLandmarks));
-                root.Attributes.Append(AddElement(xmlConfig, @"SkipIntro", enabledSkipIntro));
-
                 root.Attributes.Append(AddElement(xmlConfig, @"RemoveNoisePollution", removeNoisePollution));
                 root.Attributes.Append(AddElement(xmlConfig, @"RemoveGroundPollution", removeGroundPollution));
                 root.Attributes.Append(AddElement(xmlConfig, @"RemoveWaterPollution", removeWaterPollution));
-                root.Attributes.Append(AddElement(xmlConfig, @"OilCapacity", oilCapacity));
-                root.Attributes.Append(AddElement(xmlConfig, @"OreCapacity", oreCapacity));
-
-
+                root.Attributes.Append(AddElement(xmlConfig, @"RemoveDeath", removeDeath));
+                root.Attributes.Append(AddElement(xmlConfig, @"RemoveGarbage", removeGarbage));
+                root.Attributes.Append(AddElement(xmlConfig, @"RemoveCrime", removeCrime));
+                root.Attributes.Append(AddElement(xmlConfig, @"RemoveFire", removeFire));
+                root.Attributes.Append(AddElement(xmlConfig, @"MaximizeAttractiveness", maximizeAttractiveness));
+                root.Attributes.Append(AddElement(xmlConfig, @"MaximizeEntertainment", maximizeEntertainment));
+                root.Attributes.Append(AddElement(xmlConfig, @"MaximizeLandValue", maximizeLandValue));
+                root.Attributes.Append(AddElement(xmlConfig, @"MaximizeEducationCoverage", maximizeEducationCoverage));
+                root.Attributes.Append(AddElement(xmlConfig, @"UnlimitedOil", unlimitedOil));
+                root.Attributes.Append(AddElement(xmlConfig, @"UnlimitedOre", unlimitedOre));
+                root.Attributes.Append(AddElement(xmlConfig, @"AutoMoney", enabledAutoMoney));
+                root.Attributes.Append(AddElement(xmlConfig, @"Refund", refund));
+                root.Attributes.Append(AddElement(xmlConfig, @"DefaultMinAmount", defaultMinAmount));
+                root.Attributes.Append(AddElement(xmlConfig, @"DefaultGetCash", defaultGetCash));
+                root.Attributes.Append(AddElement(xmlConfig, @"ResidentialMultiplierFactor", residentialMultiplierFactor));
+                root.Attributes.Append(AddElement(xmlConfig, @"IndustrialMultiplierFactor", industrialMultiplierFactor));
+                root.Attributes.Append(AddElement(xmlConfig, @"CommercialMultiplierFactor", commercialMultiplierFactor));
+                root.Attributes.Append(AddElement(xmlConfig, @"OfficeMultiplierFactor", officeMultiplierFactor));
                 xmlConfig.AppendChild(root);
                 xmlConfig.Save(SettingsFileName);
-            } finally {
+            }
+            finally {
                 Monitor.Exit(settingsLock);
             }
         }
@@ -376,7 +413,8 @@ namespace GameAnarchy {
                     }
                     sw.WriteLine(@"-------------------------------------");
                 }
-            } finally {
+            }
+            finally {
                 Monitor.Exit(fileLock);
             }
         }
@@ -389,7 +427,8 @@ namespace GameAnarchy {
                 using (StreamWriter sw = new StreamWriter(debugFile)) {
                     sw.WriteLine($"{(ticks / Stopwatch.Frequency):n0}:{(ticks % Stopwatch.Frequency):D7}-{new StackFrame(1, true).GetMethod().Name} ==> {msg}");
                 }
-            } finally {
+            }
+            finally {
                 Monitor.Exit(fileLock);
             }
         }
